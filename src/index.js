@@ -8,15 +8,7 @@
  * @returns {number}
  */
 export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {
-    if (minFirst >= minSecond && maxFirst >= maxSecond){
-        return minSecond*maxFirst; 
-    } else if (minFirst <= minSecond && maxFirst <= maxSecond){
-        return minFirst*maxSecond;
-    } else if (minFirst => minSecond && maxFirst <= maxSecond){
-        return minSecond*maxSecond;
-    } else if (minFirst <= minSecond && maxFirst >= maxSecond){
-        return minFirst*maxFirst;
-    }
+    return Math.min(minFirst, minSecond) * Math.max(maxFirst, maxSecond);
 };   
 
 const minMaxMultiplyResult = minMaxMultiply(2, 3, 4, 5);
